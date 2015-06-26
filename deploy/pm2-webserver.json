@@ -1,0 +1,16 @@
+{
+  "apps" : [{
+    "name"             : "web-server",
+    "script"           : "server.js",
+    "instances"        : 1,
+    "max_restarts"     : 0,
+    "cron_restart"     : "1 0 * * *",
+    "ignore_watch"      : ["[\\/\\\\]\\./", "node_modules"],
+    "merge_logs"       : true,
+    "exec_interpreter" : "node",
+    "exec_mode"        : "fork",
+    "env_production": {
+      "NODE_ENV": "production"
+    }
+  }]
+}
