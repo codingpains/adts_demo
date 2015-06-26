@@ -19,7 +19,7 @@ pm2 delete web-server
 
 # Start new workers
 echo "-- Start new insances: pm2 start ./deploy/pm2-webserver.json --env production"
-pm2 start /home/deploy/apps/adt_demo/pm2_webserver.json --env production
+pm2 start /home/deploy/apps/adts_demo/pm2_webserver.json --env production
 
 # Deal with NGINX
 echo "-- Remove default site if it exits"
@@ -28,7 +28,7 @@ if [ -f /etc/nginx/sites-enabled/default ]; then
 fi
 
 echo "-- Override NGINX config file for this project"
-cp /home/deploy/apps/adt_demo/deploy/adt_demo.conf /etc/nginx/sites-available/adt_demo
+cp /home/deploy/apps/adts_demo/deploy/adt_demo.conf /etc/nginx/sites-available/adt_demo
 if [ -f /etc/nginx/sites-enabled/adt_demo ]; then
     ln -s /etc/nginx/sites-available/adt_demo /etc/nginx/sites-enabled/adt_demo
 fi
