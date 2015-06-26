@@ -28,7 +28,7 @@ if [ -f /etc/nginx/sites-enabled/default ]; then
 fi
 
 echo "-- Override NGINX config file for this project"
-cp ./adt_demo.conf /etc/nginx/sites-available/adt_demo
+cp /home/deploy/apps/adt_demo/deploy/adt_demo.conf /etc/nginx/sites-available/adt_demo
 if [ -f /etc/nginx/sites-enabled/adt_demo ]; then
     ln -s /etc/nginx/sites-available/adt_demo /etc/nginx/sites-enabled/adt_demo
 fi
