@@ -30,6 +30,8 @@ fi
 echo "-- Override NGINX config file for this project"
 cp /home/deploy/apps/adts_demo/deploy/adt_demo.conf /etc/nginx/sites-available/adt_demo
 if [ -f /etc/nginx/sites-enabled/adt_demo ]; then
+    echo "-- Link already exists"
+else
     ln -s /etc/nginx/sites-available/adt_demo /etc/nginx/sites-enabled/adt_demo
 fi
 
