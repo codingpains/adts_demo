@@ -19,7 +19,7 @@ pm2 delete web-server
 
 # Start new workers
 echo "-- Start new insances: pm2 start ./deploy/pm2-webserver.json --env production"
-pm2 start /home/deploy/apps/adt_demo/deploy/pm2_webserver.json --env production
+pm2 start /home/deploy/apps/adt_demo/pm2_webserver.json --env production
 
 # Deal with NGINX
 echo "-- Remove default site if it exits"
