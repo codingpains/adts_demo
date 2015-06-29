@@ -28,11 +28,11 @@ if [ -f /etc/nginx/sites-enabled/default ]; then
 fi
 
 echo "-- Override NGINX config file for this project"
-cp /home/deploy/apps/adts_demo/deploy/adt_demo.conf /etc/nginx/sites-available/adt_demo
-if [ -f /etc/nginx/sites-enabled/adt_demo ]; then
+cp /home/deploy/apps/adts_demo/deploy/adt_demo.conf /etc/nginx/sites-available/adt_demo.codingpains
+if [ -f /etc/nginx/sites-enabled/adt_demo.codingpains ]; then
     echo "-- Link already exists"
 else
-    ln -s /etc/nginx/sites-available/adt_demo /etc/nginx/sites-enabled/adt_demo
+    ln -s /etc/nginx/sites-available/adt_demo.codingpains /etc/nginx/sites-enabled/adt_demo.codingpains
 fi
 
 service nginx restart
